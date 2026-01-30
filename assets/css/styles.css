@@ -25,6 +25,7 @@ body{
 }
 a{color:inherit; text-decoration:none}
 img{max-width:100%; display:block}
+.brand-logo img{width:100%;height:100%;object-fit:contain}
 .container{max-width:var(--max); margin:0 auto; padding:0 18px}
 
 .skip-link{
