@@ -8,7 +8,7 @@
 - SEO basics: meta description, Open Graph, JSON-LD LocalBusiness, `robots.txt`, `sitemap.xml`
 
 ## Important edits before going live
-1. Replace `https://example.com/` with your real domain:
+1. Replace `https://example.com/` with your GitHub Pages URL (already set for caseymorrs23/trueshine):
    - `index.html`: canonical URL + JSON-LD `url` and `image` URLs
    - `sitemap.xml` and `robots.txt`
    - FormSubmit `_next` URL (redirect after submit)
@@ -18,3 +18,7 @@
 
 ## Deploy
 Upload the folder contents to your hosting (GoDaddy, GitHub Pages, Netlify, etc.).
+
+
+## GitHub Pages URL
+- https://caseymorrs23.github.io/trueshine/
