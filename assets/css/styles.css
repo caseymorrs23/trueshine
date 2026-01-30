@@ -400,3 +400,29 @@ textarea{min-height:92px; resize:vertical}
   .hero-card{padding:20px}
   .side-card{padding:16px}
 }
+
+/* Service photos: consistent, professional crop */
+.service-photo{
+  display:block;
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(214,178,94,.14);
+  background:rgba(0,0,0,.18);
+}
+@media (max-width: 980px){
+  .service-photo{height:240px}
+}
+
+.hero-photo{
+  display:block;
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(214,178,94,.14);
+}
+@media (max-width: 980px){
+  .hero-photo{height:240px}
+}
