@@ -519,3 +519,5 @@ textarea{min-height:92px; resize:vertical}
   .service-area-cities ul{columns:1}
   .service-area-map iframe{height:240px}
 }
+
+.seo-checklist, .admin-note { display:none !important; }
