@@ -46,10 +46,10 @@ img{max-width:100%; display:block}
   gap:14px;
 }
 .brand{
-  display:flex; align-items:center; gap:12px; min-width:220px;
+  display:flex; align-items:center; gap:14px; min-width:260px;
 }
 .brand-logo{
-  width:44px; height:44px; border-radius:12px;
+  width:200px; height:56px; border-radius:12px;
   overflow:hidden;
   border:1px solid rgba(214,178,94,.22);
   box-shadow:0 10px 30px rgba(0,0,0,.25);
@@ -60,7 +60,7 @@ img{max-width:100%; display:block}
 .brand-title .name{
   font-family:"Cinzel", Georgia, serif;
   letter-spacing:.02em;
-  font-size:18px;
+  font-size:19px;
   color:var(--gold2);
 }
 .brand-title .tag{
@@ -179,6 +179,10 @@ img{max-width:100%; display:block}
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
   box-shadow:var(--shadow);
   padding:26px;
+  background: linear-gradient(90deg, rgba(6,12,9,.92) 0%, rgba(6,12,9,.86) 48%, rgba(6,12,9,.18) 100%), url('../img/hero-wide.jpg');
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .kicker{
   display:inline-flex; gap:10px; align-items:center;
@@ -393,9 +397,11 @@ textarea{min-height:92px; resize:vertical}
   .hamburger{display:inline-flex}
   .floating-cta{display:flex}
   .brand{min-width:unset}
+  .brand-logo{width:160px;height:44px}
   .footer-grid{grid-template-columns:1fr}
 }
 @media (max-width: 420px){
+  .brand-logo{width:140px;height:40px}
   .brand-title .name{font-size:16px}
   .hero-card{padding:20px}
   .side-card{padding:16px}
@@ -407,6 +413,7 @@ textarea{min-height:92px; resize:vertical}
   width:100%;
   height:260px;
   object-fit:cover;
+  object-position:center 20%;
   border-radius:14px;
   border:1px solid rgba(214,178,94,.14);
   background:rgba(0,0,0,.18);
