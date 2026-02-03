@@ -192,8 +192,8 @@ img{max-width:100%; display:block}
   padding:26px;
   overflow:hidden;
   /* Keep the hero from getting "zoomed" by excessive height */
-  min-height:520px;
-  max-height:560px;
+  min-height:580px;
+  max-height:640px;
   /* wide hero with clean negative-space on the left for copy */
   background-image:url('../img/hero-wide.jpg');
   background-position:right center;
@@ -315,6 +315,8 @@ textarea{min-height:92px; resize:vertical}
   justify-content:center;
   padding:14px 16px;
   font-size:15px;
+  margin-top:10px;
+  margin-bottom:14px;
 }
 .section{
   padding:34px 0;
