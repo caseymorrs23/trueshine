@@ -46,16 +46,26 @@ img{max-width:100%; display:block}
   gap:14px;
 }
 .brand{
-  display:flex; align-items:center; gap:14px; min-width:260px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:unset;
 }
 .brand-logo{
-  /* Keep the logo dominant without a huge padded "card" */
-  width:160px;
-  height:auto;
-  border-radius:0;
-  overflow:visible;
-  border:none;
-  box-shadow:none;
+  /* Make the logo dominant without a giant empty container */
+  width:220px;
+  height:72px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(173,145,72,.28);
+  background:rgba(173,145,72,.10);
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+}
+
+.brand-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 .brand-title{
   display:flex; flex-direction:column; line-height:1.05;
@@ -181,10 +191,12 @@ img{max-width:100%; display:block}
   box-shadow:var(--shadow);
   padding:26px;
   overflow:hidden;
-  min-height:540px;
-  /* cropped for clean negative-space behind the text */
-  background-image:url('../img/hero-left.jpg');
-  background-position:left center;
+  /* Keep the hero from getting "zoomed" by excessive height */
+  min-height:520px;
+  max-height:560px;
+  /* wide hero with clean negative-space on the left for copy */
+  background-image:url('../img/hero-wide.jpg');
+  background-position:right center;
   background-size:cover;
   background-repeat:no-repeat;
 }
@@ -375,6 +387,20 @@ textarea{min-height:92px; resize:vertical}
   border-top:1px solid rgba(214,178,94,.14);
   background:rgba(0,0,0,.18);
 }
+
+/* Footer uses a compact mark; don't inherit the large header logo sizing */
+.footer .footer-logo{
+  width:52px;
+  height:52px;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(214,178,94,.18);
+  background:rgba(214,178,94,.10);
+}
+.footer .footer-logo img{width:100%;height:100%;object-fit:contain}
 .footer-grid{
   display:grid; gap:14px;
   grid-template-columns: 1.2fr .8fr;
@@ -422,11 +448,11 @@ textarea{min-height:92px; resize:vertical}
   .hamburger{display:inline-flex}
   .floating-cta{display:flex}
   .brand{min-width:unset}
-  .brand-logo{width:160px;height:44px}
+  .brand-logo{width:180px;height:56px}
   .footer-grid{grid-template-columns:1fr}
 }
 @media (max-width: 420px){
-  .brand-logo{width:140px;height:40px}
+  .brand-logo{width:150px;height:52px}
   .brand-title .name{font-size:16px}
   .hero-card{padding:20px}
   .side-card{padding:16px}
@@ -475,25 +501,6 @@ textarea{min-height:92px; resize:vertical}
 /* Service cards */
 .service-img{width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:10px}
 @media(max-width:980px){.hero-media img{height:280px}.service-img{height:200px}}
-
-/* === Mockup Hero Photo inside left hero card === */
-.hero-card{
-  position: relative;
-  overflow: hidden;
-}
-.hero-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg, rgba(10,14,12,.88) 0%, rgba(10,14,12,.55) 60%, rgba(10,14,12,0) 78%),
-    url("../img/hero-left.jpg");
-  background-size: cover;
-  background-position: left center;
-  pointer-events:none;
-  z-index: 0;
-}
-.hero-card > *{ position: relative; z-index: 1; }
 
 /* Quote card photo */
 .quote-photo{
@@ -563,6 +570,16 @@ textarea{min-height:92px; resize:vertical}
 }
 
 .nav .btn.primary.small{ padding:10px 12px; border-radius:14px; }
+
+/* Make the form submit look unmistakably like the primary action */
+.quote-form .btn.primary{
+  width:100%;
+  justify-content:center;
+  padding:14px 16px;
+  border-radius:14px;
+  font-size:15px;
+  letter-spacing:.2px;
+}
 
 .hero-ctas .btn:not(.primary){ opacity:.92; }
 .hero-ctas .btn.secondary:hover{ opacity:1; }
