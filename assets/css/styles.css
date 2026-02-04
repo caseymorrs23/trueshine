@@ -1,7 +1,8 @@
 :root{
-  --bg:#0b1712;
-  --bg2:#0f2018;
-  --card:#0f241b;
+  /* Slightly lighter, cleaner "deep green" palette (less black, still premium) */
+  --bg:#11251d;
+  --bg2:#143126;
+  --card:#17362a;
   --text:#e8efe9;
   --muted:#b7c6bd;
   --gold:#d6b25e;
@@ -19,9 +20,9 @@ body{
   font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--text);
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(214,178,94,.18), transparent 60%),
-    radial-gradient(900px 500px at 10% 10%, rgba(255,255,255,.06), transparent 55%),
-    linear-gradient(180deg, var(--bg) 0%, #070f0b 100%);
+    radial-gradient(1200px 600px at 50% -10%, rgba(214,178,94,.16), transparent 62%),
+    radial-gradient(900px 520px at 12% 10%, rgba(255,255,255,.08), transparent 58%),
+    linear-gradient(180deg, var(--bg) 0%, #0a1410 100%);
 }
 a{color:inherit; text-decoration:none}
 img{max-width:100%; display:block}
@@ -107,6 +108,19 @@ img{max-width:100%; display:block}
   color:var(--text);
   font-weight:700;
   box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+.btn svg{
+  /* Prevent default 300x150 inline SVG sizing from blowing up buttons */
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  opacity:.92;
+}
+.btn svg{
+  /* Prevent default 300x150 inline SVG sizing from blowing up buttons */
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
 }
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
