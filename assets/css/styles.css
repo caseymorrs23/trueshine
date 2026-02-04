@@ -654,9 +654,44 @@ body{
 .btn.secondary{
   background:rgba(15,34,24,.04);
   border:1px solid rgba(15,34,24,.12);
+  /* ensure readable text in light theme (override earlier dark-theme color rule) */
+  color:var(--text);
+}
+
+/* Make secondary CTAs look intentional (not disabled) */
+.hero-ctas .btn.secondary{
+  background:#ffffff;
+  border-color:rgba(15,34,24,.14);
 }
 
 .section{padding:56px 0}
+
+/* Increase contrast for section headings/subcopy in light theme */
+.section h2{
+  color:var(--gold);
+}
+.section p.sub{
+  color:rgba(15,34,24,.74);
+}
+
+/* Card styling for light theme */
+.card{
+  background:#ffffff;
+  border:1px solid var(--border);
+  box-shadow:0 10px 26px rgba(10,30,20,.08);
+}
+.card h3{
+  color:rgba(15,34,24,.94);
+}
+.card p{
+  color:rgba(15,34,24,.72);
+}
+
+/* Small helper text should remain readable */
+.form .hint,
+.small{
+  color:rgba(15,34,24,.64);
+}
 
 /* Polished hero */
 .hero{padding:28px 0 14px}
