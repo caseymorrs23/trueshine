@@ -51,32 +51,33 @@ img{max-width:100%; display:block}
   gap:14px;
   min-width:unset;
 }
-.brand-logo{
-  /* Make the logo dominant without a giant empty container */
-  width:220px;
-  height:72px;
+.brand-pill{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 14px;
   border-radius:16px;
-  overflow:hidden;
   border:1px solid rgba(173,145,72,.28);
   background:rgba(173,145,72,.10);
   box-shadow:0 10px 26px rgba(0,0,0,.35);
 }
 
-.brand-logo img{
-  width:100%;
-  height:100%;
+.brand-mark{
+  width:44px;
+  height:44px;
+  border-radius:12px;
   object-fit:contain;
+  background:rgba(0,0,0,.10);
 }
-.brand-title{
-  display:flex; flex-direction:column; line-height:1.05;
-}
-.brand-title .name{
+
+.brand-text{display:flex; flex-direction:column; line-height:1.05;}
+.brand-text .name{
   font-family:"Cinzel", Georgia, serif;
   letter-spacing:.02em;
   font-size:19px;
   color:var(--gold2);
 }
-.brand-title .tag{
+.brand-text .tag{
   font-size:11px; color:var(--muted); letter-spacing:.12em;
 }
 
@@ -450,12 +451,14 @@ textarea{min-height:92px; resize:vertical}
   .hamburger{display:inline-flex}
   .floating-cta{display:flex}
   .brand{min-width:unset}
-  .brand-logo{width:180px;height:56px}
+  .brand-pill{padding:10px 12px}
+  .brand-mark{width:40px; height:40px}
   .footer-grid{grid-template-columns:1fr}
 }
 @media (max-width: 420px){
-  .brand-logo{width:150px;height:52px}
-  .brand-title .name{font-size:16px}
+  .brand-pill{padding:9px 10px}
+  .brand-mark{width:36px; height:36px}
+  .brand-text .name{font-size:16px}
   .hero-card{padding:20px}
   .side-card{padding:16px}
 }
@@ -476,15 +479,22 @@ textarea{min-height:92px; resize:vertical}
 }
 
 .hero-photo{
-  display:block;
+  margin:14px 0 6px;
   width:100%;
-  height:260px;
-  object-fit:cover;
+  height:220px;
   border-radius:14px;
-  border:1px solid rgba(214,178,94,.14);
+  overflow:hidden;
+  border:1px solid rgba(15,34,24,.10);
+  background:rgba(15,34,24,.04);
+}
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
 }
 @media (max-width: 980px){
-  .hero-photo{height:240px}
+  .hero-photo{height:200px}
 }
 
 /* Photo crops */
@@ -618,12 +628,13 @@ body{
 .nav a{color:rgba(15,34,24,.92)}
 .nav a:hover{background:rgba(15,34,24,.05)}
 
-.brand-logo{
-  border:1px solid rgba(15,34,24,.10);
-  background:rgba(255,255,255,.75);
+.brand-pill{
+  border:1px solid rgba(15,34,24,.12);
+  background:rgba(255,255,255,.92);
   box-shadow:0 10px 26px rgba(10,30,20,.10);
 }
-.brand-title .tag{color:rgba(74,98,87,.95)}
+.brand-mark{background:rgba(15,34,24,.04)}
+.brand-text .tag{color:rgba(15,34,24,.62)}
 
 .btn{
   border:1px solid rgba(15,34,24,.14);
@@ -720,12 +731,15 @@ h1{color:rgba(15,34,24,.98)}
   box-shadow:var(--shadow);
 }
 
+.side-card p{color:rgba(15,34,24,.72)}
+
 .form input, .form select, .form textarea{
   background:#fff;
   border:1px solid rgba(15,34,24,.14);
   color:var(--text);
 }
 .form label{color:rgba(15,34,24,.86)}
+.form .hint{color:rgba(15,34,24,.62)}
 
 .quote-aside{margin-top:12px}
 .quote-photo{border:1px solid rgba(15,34,24,.10)}
